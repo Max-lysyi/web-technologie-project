@@ -3,43 +3,43 @@ import React from 'react'
 import bgMainImg from '../../assets/grid-pattern-removebg-preview.png'
 
 const Portfolio = () => {
-interface Testimonial {
-  quote: string
-  name: string
-  title: string
-  image: string
-}
+  interface Testimonial {
+    quote: string
+    name: string
+    title: string
+    image: string
+  }
 
-const testimonials: Testimonial[] = [
-  {
-    quote:
-      "Collaborating with Maksym was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Maksym's enthusiasm for every facet of development truly stands out.",
-    name: 'Michael Johnson',
-    title: 'Director of AlphaStream',
-    image: '👨🏻‍💼',
-  },
-  {
-    quote:
-      'Maksym transformed our vision into reality. His attention to detail and modern design principles resulted in a stunning interface that our users absolutely love. Highly recommended for any complex frontend challenges.',
-    name: 'Sarah Williams',
-    title: 'CEO at TechFlow',
-    image: '👩🏼‍💻',
-  },
-  {
-    quote:
-      "An outstanding developer who consistently delivers high-quality code. Maksym's ability to seamlessly integrate complex animations while maintaining top-notch performance across all devices is truly impressive.",
-    name: 'David Chen',
-    title: 'Lead Designer at Creativ',
-    image: '👨🏻‍🎨',
-  },
-  {
-    quote:
-      'Working with Maksym streamlined our entire frontend process. His proactive communication and deep understanding of React ecosystem helped us launch our product two weeks ahead of schedule.',
-    name: 'Emily Rodriguez',
-    title: 'Product Manager at Innovate',
-    image: '👩🏽‍💼',
-  },
-]
+  const testimonials: Testimonial[] = [
+    {
+      quote:
+        "Collaborating with Maksym was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Maksym's enthusiasm for every facet of development truly stands out.",
+      name: 'Michael Johnson',
+      title: 'Director of AlphaStream',
+      image: `${import.meta.env.BASE_URL}face1.jpg`,
+    },
+    {
+      quote:
+        'Maksym transformed our vision into reality. His attention to detail and modern design principles resulted in a stunning interface that our users absolutely love. Highly recommended for any complex frontend challenges.',
+      name: 'Sarah Williams',
+      title: 'CEO at TechFlow',
+      image: `${import.meta.env.BASE_URL}face2.jpg`,
+    },
+    {
+      quote:
+        "An outstanding developer who consistently delivers high-quality code. Maksym's ability to seamlessly integrate complex animations while maintaining top-notch performance across all devices is truly impressive.",
+      name: 'David Chen',
+      title: 'Lead Designer at Creativ',
+      image: `${import.meta.env.BASE_URL}face3.jpg`,
+    },
+    {
+      quote:
+        'Working with Maksym streamlined our entire frontend process. His proactive communication and deep understanding of React ecosystem helped us launch our product two weeks ahead of schedule.',
+      name: 'Emily Rodriguez',
+      title: 'Product Manager at Innovate',
+      image: `${import.meta.env.BASE_URL}face4.jpg`,
+    },
+  ]
 
   return (
     <div className=" min-h-screen bg-[#000319] text-white font-sans overflow-x-hidden selection:bg-purple-500/30">
@@ -47,7 +47,6 @@ const testimonials: Testimonial[] = [
         className="absolute inset-0 z-0 pointer-events-none opacity-10 bg-center bg-no-repeat bg-cover"
         style={{ backgroundImage: `url(${bgMainImg})` }}
       />
-
 
       <nav className="fixed top-5 left-1/2 -translate-x-1/2 z-50 bg-[#000319]/50 backdrop-blur-md border border-white/10 rounded-full px-6 py-4 flex gap-6 text-sm font-medium">
         <a href="#about" className="hover:text-purple-400 transition-colors">
@@ -86,13 +85,14 @@ const testimonials: Testimonial[] = [
         </button>
       </section>
 
-      
       <section id="about" className="max-w-7xl mx-auto px-5 py-20">
         <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-2 gap-5">
           <div className="md:col-span-2 md:row-span-2 bg-[#0c0e23] border border-white/10 rounded-3xl p-8 flex flex-col justify-end relative overflow-hidden md:min-h-[500px]">
             <div
               className="absolute inset-0 bg-gradient-to-br from-indigo-900/40 to-transparent bg-no-repeat bg-center bg-cover flex items-center justify-center"
-              style={{ backgroundImage: `url(/ABOUT.jpg)` }}
+              style={{
+                backgroundImage: `url("${import.meta.env.BASE_URL}ABOUT.jpg")`,
+              }}
             ></div>
             <h3 className="text-3xl font-bold z-10 max-w-md">
               I prioritize client collaboration, fostering open communication
@@ -101,7 +101,9 @@ const testimonials: Testimonial[] = [
 
           <div
             className="bg-[#0c0e23] border border-white/10 rounded-3xl bg-no-repeat bg-contain  bg-bottom p-8 relative overflow-hidden"
-            style={{ backgroundImage: `url(/ABOUT1.png)` }}
+            style={{
+              backgroundImage: `url("${import.meta.env.BASE_URL}ABOUT1.png")`,
+            }}
           >
             <h3 className="text-xl font-bold mb-4">
               I'm very flexible with time zone communications
@@ -110,7 +112,9 @@ const testimonials: Testimonial[] = [
 
           <div
             className="bg-[#0c0e23] border border-white/10 rounded-3xl p-8 bg-no-repeat bg-contain bg-right "
-            style={{ backgroundImage: `url(/ABOUT2.png)` }}
+            style={{
+              backgroundImage: `url("${import.meta.env.BASE_URL}ABOUT2.png")`,
+            }}
           >
             <p className="text-sm text-gray-400 mb-1">
               I constantly try to improve
@@ -120,7 +124,9 @@ const testimonials: Testimonial[] = [
 
           <div
             className="md:col-span-2 bg-[#0c0e23] border border-white/10 bg-right bg-no-repeat rounded-3xl p-8 flex items-center"
-            style={{ backgroundImage: `url(/ABOUT3.png)` }}
+            style={{
+              backgroundImage: `url("${import.meta.env.BASE_URL}ABOUT3.png")`,
+            }}
           >
             <div>
               <p className="text-sm text-gray-400 mb-1">THE INSIDE SCOOP</p>
@@ -148,7 +154,6 @@ const testimonials: Testimonial[] = [
         </div>
       </section>
 
-      
       <section id="projects" className="max-w-7xl mx-auto px-5 py-20">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           A small selection of{' '}
@@ -158,22 +163,22 @@ const testimonials: Testimonial[] = [
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {[
             {
-              img: '/public/Card.jpg',
+              img: `${import.meta.env.BASE_URL}Card.jpg`,
               title: '3D Solar System Planets to Explore',
               p: 'Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.',
             },
             {
-              img: '/public/Card1.jpg',
+              img: `${import.meta.env.BASE_URL}Card1.jpg`,
               title: 'Yoom - Video Conferencing App',
               p: 'Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.',
             },
             {
-              img: '/public/Card2.jpg',
+              img: `${import.meta.env.BASE_URL}Card2.jpg`,
               title: 'AI Image SaaS - Canva Application',
               p: 'A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.',
             },
             {
-              img: '/public/Card3.jpg',
+              img: `${import.meta.env.BASE_URL}Card3.jpg`,
               title: 'Animated Apple Iphone 3D Website',
               p: 'Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects.',
             },
@@ -191,16 +196,16 @@ const testimonials: Testimonial[] = [
                 <div className="flex -space-x-2">
                   {[
                     {
-                      img: '/public/React 5.png',
+                      img: `${import.meta.env.BASE_URL}React 5.png`,
                     },
                     {
-                      img: '/public/Tailwindcss.png',
+                      img: `${import.meta.env.BASE_URL}Tailwindcss.png`,
                     },
                     {
-                      img: '/public/ts.png',
+                      img: `${import.meta.env.BASE_URL}ts.png`,
                     },
                     {
-                      img: '/public/Threejs-logo 2.png',
+                      img: `${import.meta.env.BASE_URL}Threejs-logo 2.png`,
                     },
                   ].map((img, icon) => (
                     <div
@@ -223,19 +228,16 @@ const testimonials: Testimonial[] = [
         </div>
       </section>
 
-      
       <section
         id="testimonials"
         className="max-w-8xl mx-auto px-5 py-20 overflow-hidden"
       >
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-          Kind words from{' '}
+          Kind words from
           <span className="text-[#cbacf9]">satisfied clients</span>
         </h2>
 
-        
         <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-          
           <div className="flex w-max gap-8 animate-infinite-scroll py-4">
             {[...testimonials, ...testimonials].map((item, index) => (
               <div
@@ -247,9 +249,12 @@ const testimonials: Testimonial[] = [
                 </p>
                 <div className="flex items-center gap-4 mt-auto">
                   {/* Аватарка */}
-                  <div className="w-12 h-12 rounded-full bg-gray-800 border border-white/10 flex items-center justify-center text-xl shrink-0">
-                    {item.image}
-                  </div>
+                  <img
+                    src={item.image}
+                    alt="#"
+                    className="w-12 h-12 rounded-full bg-gray-800 border border-white/10 flex items-center justify-center text-xl shrink-0"
+                  />
+
                   <div>
                     <h4 className="text-white font-bold text-lg leading-none mb-1">
                       {item.name}
@@ -261,48 +266,38 @@ const testimonials: Testimonial[] = [
             ))}
           </div>
         </div>
-
-       
         <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 mt-20 opacity-70">
-          <div className="flex items-center gap-2 text-xl font-bold text-white hover:opacity-100 transition-opacity cursor-pointer">
-            <img
-              src="/Testimonsals.png"
-              alt="Company 1"
-              className="h-8 md:h-10 w-auto"
-            />
-          </div>
-          <div className="flex items-center gap-2 text-xl font-bold text-white hover:opacity-100 transition-opacity cursor-pointer">
-            <img
-              src="/Testimonsals1.png"
-              alt="Company 2"
-              className="h-8 md:h-10 w-auto"
-            />
-          </div>
-          <div className="flex items-center gap-2 text-xl font-bold text-white hover:opacity-100 transition-opacity cursor-pointer">
-            <img
-              src="/Testimonsals2.png"
-              alt="Company 3"
-              className="h-8 md:h-10 w-auto"
-            />
-          </div>
-          <div className="flex items-center gap-2 text-xl font-bold text-white hover:opacity-100 transition-opacity cursor-pointer">
-            <img
-              src="/Testimonsals3.png"
-              alt="Company 4"
-              className="h-8 md:h-10 w-auto"
-            />
-          </div>
-          <div className="flex items-center gap-2 text-xl font-bold text-white hover:opacity-100 transition-opacity cursor-pointer">
-            <img
-              src="/Testimonsals4.png"
-              alt="Company 5"
-              className="h-8 md:h-10 w-auto"
-            />
-          </div>
+          {[
+            {
+              img: `${import.meta.env.BASE_URL}Testimonsals.png`,
+            },
+            {
+              img: `${import.meta.env.BASE_URL}Testimonsals1.png`,
+            },
+            {
+              img: `${import.meta.env.BASE_URL}Testimonsals2.png`,
+            },
+            {
+              img: `${import.meta.env.BASE_URL}Testimonsals3.png`,
+            },
+            {
+              img: `${import.meta.env.BASE_URL}Testimonsals4.png`,
+            },
+          ].map((img, id) => (
+            <div
+              key={id}
+              className="flex items-center gap-2 text-xl font-bold text-white hover:opacity-100 transition-opacity cursor-pointer"
+            >
+              <img
+                src={img.img}
+                alt="Company "
+                className="h-8 md:h-10 w-auto"
+              />
+            </div>
+          ))}
         </div>
       </section>
 
-      
       <section id="experience" className="max-w-7xl mx-auto px-5 py-20">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           My <span className="text-[#cbacf9]">work experience</span>
@@ -311,22 +306,22 @@ const testimonials: Testimonial[] = [
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
             {
-              img: '/public/_Group_.png',
+              img: `${import.meta.env.BASE_URL}_Group_.png`,
               title: 'Frontend Engineer Intern',
               desc: 'Assisted in the development of a web-based platform using React.js.',
             },
             {
-              img: '/public/_Group1_.png',
+              img: `${import.meta.env.BASE_URL}_Group1_.png`,
               title: 'Mobile App Dev',
               desc: 'Designed and developed mobile app for iOS & Android platforms.',
             },
             {
-              img: '/public/_Groupe2_.png',
+              img: `${import.meta.env.BASE_URL}_Groupe2_.png`,
               title: 'Freelance App Dev',
               desc: 'Led the dev of a mobile app for a client, from concept to deployment.',
             },
             {
-              img: '/public/_Group3_.png',
+              img: `${import.meta.env.BASE_URL}_Group3_.png`,
               title: 'Lead Frontend Developer',
               desc: 'Developed and maintained user-facing features using modern tech.',
             },
@@ -351,7 +346,6 @@ const testimonials: Testimonial[] = [
         </div>
       </section>
 
-      
       <section className="max-w-7xl mx-auto px-5 py-20">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           My <span className="text-[#cbacf9]">approach</span>
@@ -384,7 +378,6 @@ const testimonials: Testimonial[] = [
         </div>
       </section>
 
-      
       <footer
         id="contact"
         className="w-full pt-20 pb-10 px-5 text-center relative"
@@ -393,7 +386,7 @@ const testimonials: Testimonial[] = [
           className="absolute inset-0 z-0 pointer-events-none opacity-10  bg-no-repeat bg-cover"
           style={{ backgroundImage: `url(${bgMainImg})` }}
         />
-       
+
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_100%,#000_70%,transparent_100%)] pointer-events-none opacity-20" />
 
         <h2 className="text-4xl md:text-5xl font-bold max-w-2xl mx-auto leading-tight relative z-10">
@@ -415,13 +408,13 @@ const testimonials: Testimonial[] = [
           </p>
           <div className="flex gap-4">
             <div className="w-10 h-10 rounded-xl border border-white/10 bg-[#0c0e23] flex items-center justify-center hover:bg-white/10 cursor-pointer transition-colors">
-              <img src="/footer.png" alt="" />
+              <img src={`${import.meta.env.BASE_URL}footer.png`} alt="" />
             </div>
             <div className="w-10 h-10 rounded-xl border border-white/10 bg-[#0c0e23] flex items-center justify-center hover:bg-white/10 cursor-pointer transition-colors">
-              <img src="/footer1.png" alt="" />
+              <img src={`${import.meta.env.BASE_URL}footer1.png`} alt="" />
             </div>
             <div className="w-10 h-10 rounded-xl border border-white/10 bg-[#0c0e23] flex items-center justify-center hover:bg-white/10 cursor-pointer transition-colors">
-              <img src="/footer2.png" alt="" />
+              <img src={`${import.meta.env.BASE_URL}footer2.png`} alt="" />
             </div>
           </div>
         </div>

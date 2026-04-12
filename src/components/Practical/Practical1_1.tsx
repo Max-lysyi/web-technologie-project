@@ -18,7 +18,7 @@ const Practical1_1 = () => {
                         </p>
                         
                         <div className="float-right ml-6 mb-4 w-64">
-                            <img src="/thomas-bennie-lxziZx-TfSo-unsplash.jpg" alt="Thomas Frank" className="w-full h-auto rounded-lg shadow-md" />
+                            <img src={`${import.meta.env.BASE_URL}ML-FINT.jpg`} alt="Thomas Frank" className="w-full h-auto rounded-lg shadow-md" />
                             <p className="text-xs text-gray-500 mt-2 italic text-center">My beard is the source of my power</p>
                         </div>
 

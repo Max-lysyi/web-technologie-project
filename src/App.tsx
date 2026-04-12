@@ -10,6 +10,7 @@ import Practical1 from './components/Practical/Practical1'
 import Practical1_1 from './components/Practical/Practical1_1'
 import Practical1_2 from './components/Practical/Practical1_2'
 import Practical1_3 from './components/Practical/Practical1_3'
+import Practical4 from './components/Practical/Practical4'
 
 import Practical3 from './components/Practical/Practical3'
 import Practical3_1 from './components/Practical/Practical3_1'
@@ -35,6 +36,7 @@ function App() {
           <Route path="/practical/1/1" element={<Practical1_1 />} />
           <Route path="/practical/1/2" element={<Practical1_2 />} />
           <Route path="/practical/1/3" element={<Practical1_3 />} />
+          <Route path="/practical/4" element={<Practical4 />} />
 
           <Route path="/practical/3" element={<Practical3 />} />
           <Route path="/practical/3/1" element={<Practical3_1 />} />
