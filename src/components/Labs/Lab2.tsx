@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import bgMainImg from '../../assets/grid-pattern-removebg-preview.png'
 
 const Portfolio = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  // 3. Функція для перемикання стану
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+  }
+
   interface Testimonial {
     quote: string
     name: string
@@ -48,7 +55,7 @@ const Portfolio = () => {
         style={{ backgroundImage: `url(${bgMainImg})` }}
       />
 
-      <nav className="fixed top-5 left-1/2 -translate-x-1/2 z-50 bg-[#000319]/50 backdrop-blur-md border border-white/10 rounded-full px-6 py-4 flex gap-6 text-sm font-medium">
+      <nav className="hidden fixed   md:flex top-5 left-1/2 -translate-x-1/2 z-50 bg-[#000319]/50 backdrop-blur-md border border-white/10 rounded-full px-6 py-4  gap-6 text-sm font-medium">
         <a href="#about" className="hover:text-purple-400 transition-colors">
           About
         </a>
@@ -65,6 +72,94 @@ const Portfolio = () => {
           Contact
         </a>
       </nav>
+      <button
+        className="md:hidden absolute top-6 right-6 z-[60] p-2"
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+      >
+        <svg
+          width="48"
+          height="48"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="3"
+            y="6"
+            width="18"
+            height="2"
+            rx="1"
+            fill={isOpen ? '#9D4EDD' : '#E6E6E6'}
+            className="transition-all duration-300"
+            style={{
+              transform: isOpen ? 'rotate(45deg) translate(5px, 0px)' : 'none',
+            }}
+          />
+          {/* Середня лінія: зникає при відкритті */}
+          <rect
+            x="3"
+            y="11"
+            width="18"
+            height="2"
+            rx="1"
+            fill="#E6E6E6"
+            className={`transition-all duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`}
+          />
+          {/* Нижня лінія: стає іншою частиною хрестика */}
+          <rect
+            x="3"
+            y="16"
+            width="18"
+            height="2"
+            rx="1"
+            fill={isOpen ? '#E6E6E6' : '#9D4EDD'}
+            className="transition-all duration-300"
+            style={{
+              transform: isOpen
+                ? 'rotate(-45deg) translate(-10px, 7px)'
+                : 'none',
+            }}
+          />
+        </svg>
+      </button>
+
+      <div
+        className={`flex w-full h-full bg-[#000319]/95 backdrop-blur-xl fixed z-50 top-0 transition-all duration-500 ease-in-out ${
+          isOpen ? 'left-0' : 'left-[-100%]'
+        }`}
+      >
+        <nav className="flex flex-col items-center justify-center w-full gap-8 text-2xl font-bold">
+          <a
+            href="#about"
+            onClick={() => setIsOpen(false)}
+            className="hover:text-purple-400 transition-colors"
+          >
+            About
+          </a>
+          <a
+            href="#projects"
+            onClick={() => setIsOpen(false)}
+            className="hover:text-purple-400 transition-colors"
+          >
+            Projects
+          </a>
+          <a
+            href="#testimonials"
+            onClick={() => setIsOpen(false)}
+            className="hover:text-purple-400 transition-colors"
+          >
+            Testimonials
+          </a>
+          <a
+            href="#contact"
+            onClick={() => setIsOpen(false)}
+            className="hover:text-purple-400 transition-colors"
+          >
+            Contact
+          </a>
+        </nav>
+      </div>
 
       <section className="relative w-full h-screen flex flex-col items-center justify-center text-center px-5 pt-20">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none opacity-20" />
