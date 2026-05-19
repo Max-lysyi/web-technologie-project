@@ -16,6 +16,35 @@ import Practical3 from './components/Practical/Practical3'
 import Practical3_1 from './components/Practical/Practical3_1'
 import Practical3_2 from './components/Practical/Practical3_2'
 
+import Practical5 from './components/Practical/Practical5'
+import Practical5_1 from './components/Practical/Practical5_1'
+import Practical5_2 from './components/Practical/Practical5_2'
+import Practical5_3 from './components/Practical/Practical5_3'
+import Practical5_4 from './components/Practical/Practical5_4'
+
+import Practical6 from './components/Practical/Practical6'
+import Practical6_1 from './components/Practical/Practical6_1'
+import Practical6_2 from './components/Practical/Practical6_2'
+import Practical6_3 from './components/Practical/Practical6_3'
+import Practical6_4 from './components/Practical/Practical6_4'
+import Practical6_5 from './components/Practical/Practical6_5'
+import Practical6_6 from './components/Practical/Practical6_6'
+
+import Practical7 from './components/Practical/Practical7'
+
+import Practical8 from './components/Practical/Practical8'
+import Practical8_1 from './components/Practical/Practical8_1'
+import Practical8_2 from './components/Practical/Practical8_2'
+import Practical8_3 from './components/Practical/Practical8_3'
+import Practical8_4 from './components/Practical/Practical8_4'
+
+import Practical9 from './components/Practical/Practical9'
+
+
+
+
+
+
 import './App.css'
 
 
@@ -41,6 +70,30 @@ function App() {
           <Route path="/practical/3" element={<Practical3 />} />
           <Route path="/practical/3/1" element={<Practical3_1 />} />
           <Route path="/practical/3/2" element={<Practical3_2 />} />
+
+          <Route path="/practical/5" element={<Practical5 />} />
+          <Route path="/practical/5/1" element={<Practical5_1 />} />
+          <Route path="/practical/5/2" element={<Practical5_2 />} />
+          <Route path="/practical/5/3" element={<Practical5_3 />} />
+          <Route path="/practical/5/4" element={<Practical5_4 />} />
+
+          <Route path="/practical/6" element={<Practical6 />} />
+          <Route path="/practical/6/1" element={<Practical6_1 />} />
+          <Route path="/practical/6/2" element={<Practical6_2 />} />
+          <Route path="/practical/6/3" element={<Practical6_3 />} />
+          <Route path="/practical/6/4" element={<Practical6_4 />} />
+          <Route path="/practical/6/5" element={<Practical6_5 />} />
+          <Route path="/practical/6/6" element={<Practical6_6 />} />
+
+          <Route path="/practical/7" element={<Practical7 />} />
+
+          <Route path="/practical/8" element={<Practical8 />} />
+          <Route path="/practical/8/1" element={<Practical8_1 />} />
+          <Route path="/practical/8/2" element={<Practical8_2 />} />
+          <Route path="/practical/8/3" element={<Practical8_3 />} />
+          <Route path="/practical/8/4" element={<Practical8_4 />} />
+
+          <Route path="/practical/9" element={<Practical9 />} />
         </Routes>
       </TransitionProvider>
     </>
